@@ -1,7 +1,4 @@
- 
-
 alert("Choose between rock/paper/scissors !");
-
 
 function getComputerChoice() {
     let cc = Math.floor(Math.random() * 3);
@@ -14,7 +11,9 @@ function getComputerChoice() {
     }
 }
 
-let playerSelection = prompt("enter your choice");
+let prompt1 = prompt("enter your choice");
+let playerSelection = prompt1.toLowerCase();
+
 let computerSelection = getComputerChoice();
 
 
