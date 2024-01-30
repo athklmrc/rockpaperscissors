@@ -1,7 +1,6 @@
  
 
 alert("Choose between rock/paper/scissors !");
-// var playerSelection = prompt("enter your choice");
 
 
 function getComputerChoice() {
@@ -15,10 +14,15 @@ function getComputerChoice() {
     }
 }
 
+let playerSelection = prompt("enter your choice");
+let computerSelection = getComputerChoice();
+
+
 
 function playRound (playerSelection, computerSelection) {
-    let computerSelection = getComputerChoice();
-    let playerSelection = prompt("enter your choice");
+    console.log(`player has choosen ${playerSelection}`);
+    console.log(`computer has choosen ${computerSelection}`);
+
 
     switch(playerSelection) {
         case "rock":
@@ -30,26 +34,25 @@ function playRound (playerSelection, computerSelection) {
                 return "you win against scissors";
             }
         case "paper":
-            if (computerSelection==="") {
-                ;
+            if (computerSelection==="rock") {
+                return "You win against ROCK";
+            } else if (computerSelection==="paper") {
+                return "its a tie";
+            } else {
+                return "you loose";
             }
-
-
-
         case "scissors":
-            return
+            if (computerSelection==="rock") { 
+                return "You Loose against ROCK";
+            } else if (computerSelection==="paper") {
+                return "you win";
+            } else {
+                return "its a tie";
+            }    
     }
 
 }
 
-
-/*     if (playerSelection===computerSelection) {
-        console.log("its a tie!");
-    } else if (playerSelection==="rock" && computerSelection==="paper" {
-        return `You Loose! Paper beats ${playerSelection} ` ;
-    } else if (playerSelection==="rock") {
-
-*/
 
 
 
