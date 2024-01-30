@@ -28,9 +28,9 @@ function playRound (playerSelection, computerSelection) {
             if (computerSelection==="rock") { 
                 return "its a tie";
             } else if (computerSelection==="paper") {
-                return "you loose against paper";
+                return "you loose against PAPER";
             } else {
-                return "you win against scissors";
+                return "you win against SCISSORS";
             }
         case "paper":
             if (computerSelection==="rock") {
@@ -38,19 +38,32 @@ function playRound (playerSelection, computerSelection) {
             } else if (computerSelection==="paper") {
                 return "its a tie";
             } else {
-                return "you loose";
+                return "you loose against SCISSORS";
             }
         case "scissors":
             if (computerSelection==="rock") { 
                 return "You Loose against ROCK";
             } else if (computerSelection==="paper") {
-                return "you win";
+                return "you win against PAPER";
             } else {
                 return "its a tie";
-            }    
+            }
+        default:
+            return "please use correct input";
     }
 
 }
+
+function playGame() {
+    let scorePlayer;
+    let scoreComputer;
+
+    playRound();
+
+
+}
+
+
 
 
 
